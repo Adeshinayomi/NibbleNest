@@ -157,11 +157,10 @@ footer .credit{
 }
 @media (min-width:300px) and (max-width:500px) {
   header .logo img{
-  width: 30%;
-  height: 8vh;
-  border-radius: var(--button-border-raduis);
-
-}
+    width: 30%;
+    height: 8vh;
+    border-radius: var(--button-border-raduis);
+  }
   header{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -172,6 +171,7 @@ footer .credit{
     display: none;
   }
   .footer-cont{
+    padding: 0 10px;
     grid-template-columns:1fr;
     gap: 2rem;
   }
@@ -193,6 +193,7 @@ footer .credit{
   footer .credit{
     grid-template-columns: repeat(1,1fr);
     gap: 1rem;
+    padding: 0 10px;
   }
   .credit .owner{
     display: flex;
