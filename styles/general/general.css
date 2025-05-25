@@ -11,7 +11,7 @@
   --primary-color:#FFFFFF;
   --secondary-color:#FFF0D8;
   --accent-color:#7C4F28;
-  --bacground-gradient:linear-gradient(#f9f3e95d,#ca9a464c);
+  --bacground-gradient:linear-gradient(#fff0d84a,#FFF0D8);
   --box-shadow:2px 2px 4px 4px #FFFFFF;
   --card-border-raduis:20px;
   --button-border-raduis:100px;
@@ -46,6 +46,7 @@ p,span,a{
   border-radius: var(--button-border-raduis);
   background-color: var(--primary-color);
   font-weight: var(--bold-text);
+  font-size: var(--small-text);
   color: var(--accent-color);
 }
 .secondary-btn{
@@ -153,4 +154,48 @@ footer .credit{
 .credit .owner{
   display: flex;
   justify-content: end;
+}
+@media (min-width:300px) and (max-width:500px) {
+  header .logo img{
+  width: 30%;
+  height: 8vh;
+  border-radius: var(--button-border-raduis);
+
+}
+  header{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: space-between;
+    align-items: center;
+  }
+  header nav{
+    display: none;
+  }
+  .footer-cont{
+    grid-template-columns:1fr;
+    gap: 2rem;
+  }
+  .footer.cont .about p{
+    width: 80%;
+    font-weight: var(--bold-text);
+  }
+  .nav-cont{
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+  }  
+  .nav-cont .nav-links{
+    display:grid;
+    gap:1rem;
+  }
+  .nav-links h1{
+    font-size: var(--meduim-text);
+  }
+  footer .credit{
+    grid-template-columns: repeat(1,1fr);
+    gap: 1rem;
+  }
+  .credit .owner{
+    display: flex;
+    justify-content: end;
+  }
 }
