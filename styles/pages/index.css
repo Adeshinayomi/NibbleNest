@@ -189,6 +189,7 @@
   align-items: center;
   height: 40px;
   background-color: transparent;
+  border-radius:var(--card-border-raduis);
 }
 .recipe-detail button img{
   width: 20px;
