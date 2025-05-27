@@ -322,12 +322,11 @@
   }
   .testimonies-cont{
     width:100%;
-    gap:1.5rem;
-    padding: 0 30px;
-    overflow-x: auto;
+    gap: 1.5;
+    padding: 0 150px;
+    overflow-x:auto;
   }
   .testimonies-cont::-webkit-scrollbar{
-    width: 0;
     display: none; /* Chrome, Safari and Opera */
   }
   .testimony-card{
