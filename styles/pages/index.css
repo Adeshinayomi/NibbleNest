@@ -1,6 +1,3 @@
-  &::-webkit-scrollbar {
-    display: none; /* Chrome, Safari and Opera */
-  }   
 .hero{
   margin-top:10px;
   width: 100%;
@@ -21,7 +18,6 @@
   align-items: end;
   gap: 2rem;
   /* border: 2px solid; */
-
 }
 .hero .hero-text{
   width: 70%;

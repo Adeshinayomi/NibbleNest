@@ -25,6 +25,10 @@
   --bold-text:500;
   --light-text:300;
 }
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+  scrollbar-width: none; /* Firefox */
+} 
 h1{
   font-size: var(--subheading-text);
   color: var(--accent-color);
@@ -147,8 +151,8 @@ header .header-icon{
   justify-content: space-around;
   gap: 3rem;
   overflow-x: auto;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* Internet Explorer and Edge */
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
 }
  
 .recipe-card{
