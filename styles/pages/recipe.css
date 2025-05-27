@@ -1,0 +1,178 @@
+.hero{
+  width: 100%;
+  height: 40vh;
+  background: var(--bacground-gradient),url('../../images/blueberries-toast-bread-oats-banana-slices-with-coffee-wooden-textured-backdrop.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.hero-cont{
+  width: 90%;
+  padding: 20px 0;
+  margin:auto;
+  display: grid;
+  gap: 1.5rem;
+}
+.hero-cont h1{
+  width: 40%;
+}
+
+.hero-cont form{
+  flex-direction: row;
+  justify-content:start;
+}
+.hero-cont form input{
+  width: 50%;
+}  
+.categories{
+  margin:70px 0;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.category-btns-cont{
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3,100px);
+  gap:.4rem;
+}
+.category-btns{
+  width: 100%;
+  margin: auto;
+  border:1px solid var(--accent-color);
+  padding: 10px;
+  background-color: var(--primary-color);
+  border-radius: var(--button-border-raduis);
+  display: flex;
+  justify-content: center;
+}
+.second{
+  width:70%;
+  display: grid;
+  justify-self: center;
+  padding: 10px 0;
+  grid-template-columns: repeat(2,1fr);
+  justify-content: center;
+  gap: 1rem;
+}
+.category-btns.active{
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+.recipes{
+  width: 90%;
+  margin: auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3,1fr);
+  justify-content:center;
+}
+.recipe-card{
+  box-shadow: 2px 2px 2px rgba(24, 18, 18, 0.281);
+}
+.nav-btns-cont{
+  width: 100%;
+  margin-top:50px ;
+  display: grid;
+  justify-content: center;
+  gap: 1rem;
+}
+@media (min-width:300px) and (max-width:500px) {
+  .hero{
+    width: 100%;
+    height: 55vh;
+  }
+  .hero-cont h1{
+    width: 100%;
+  }
+  .hero-cont form{
+    width: 100%;
+    flex-direction: column;
+    justify-content:center;
+  }
+  .hero-cont form input{
+    width: 100%;
+  }
+  .recipes{
+    grid-template-columns: repeat(2,1fr);
+  }
+  .recipes-cont{
+    width: 95%; 
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    gap: 1.5rem;
+    overflow-x:visible;
+  }
+  .recipe-card{
+    width: 160px;
+    height: 250px;
+  }
+  .recipe-card .recipe-image{
+    width: 100%;
+    height: 120px;
+  }
+  .recipe-card .recipe-detail{
+    height: 100px;
+    gap: 1.5rem;
+  }
+  .recipe-card .recipe-detail h4{
+    font-size:var(--small-text);
+  }
+  .recipe-detail button{
+    width: 100%;
+    height: 30px;
+    font-size: 10px;
+    justify-content:start;
+    align-items: center;
+  }
+  .recipe-detail button img{
+    width: 10px;
+    height: 10px;
+  }
+  .recipe-nav-btn{
+    display:none;
+  }
+  .nav-btns-cont{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .recipe-nav-btn{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+  }
+}
+@media (min-width:450px) and (max-width:500px){
+  .recipes-cont{
+    width: 95%; 
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+    overflow-x:visible;
+  }
+  .recipe-card{
+    width: 200px;
+    height: 300px;
+  }
+  .recipe-card .recipe-image{
+    width: 100%;
+    height: 150px;
+  }
+  .recipe-card .recipe-detail{
+    height: 150px;
+    gap: 2rem;
+  }
+  .recipe-detail button{
+    width: 100%;
+    height: 40px;
+    font-size: 10px;
+    justify-content:center;
+  }
+  .recipe-detail button img{
+    width: 20px;
+    height: 20px;
+  }
+}
