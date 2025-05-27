@@ -60,6 +60,7 @@
   width: 100%;
   margin-top: 50px;
   display: grid;
+  padding: 10px;
   gap: 1rem;
 }
 .categories-header{
@@ -71,7 +72,7 @@
   margin: auto;
   display: grid;
   grid-template-columns: repeat(5,1fr);
-  justify-content:space-around;
+  justify-content:space-between;
 }
 .category-card{
   width: 100%;
@@ -236,6 +237,7 @@
   .categories-cont{
     width: 100%;
     gap: 2rem;
+    scroll-padding-left:10px ;
     overflow-x: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -319,13 +321,10 @@
     height: 10vh;
   }
   .testimonies-cont{
-    width: 90%;
-    padding:0;
-    gap: 2rem;
+    width:100%;
+    gap:1.5rem;
+    padding: 0 30px;
     overflow-x: auto;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
   }
   .testimonies-cont::-webkit-scrollbar{
     width: 0;
