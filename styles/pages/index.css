@@ -139,7 +139,6 @@
   margin: auto;
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  justify-content: space-around;
   gap: 2rem;
 }
 .testimony-card{
@@ -212,9 +211,11 @@
     background-repeat:no-repeat;
     background-position:bottom bottom;
     background-size: cover;
+    display: grid;
+    justify-content: center;
   }
   .hero-cont{
-    height: 70%;
+    width: 80%;
     justify-content:center;
     align-items: end;
     gap: 2rem;
@@ -321,12 +322,13 @@
     height: 10vh;
   }
   .testimonies-cont{
-    width: 100%;
+    width: 90%;
     display: flex;
     gap: 1.5rem;
-    padding: 0 10px;
+    padding: 0;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    scroll-padding-left: 10px;
   }
   .testimonies-cont::-webkit-scrollbar{
     display: none; /* Chrome, Safari and Opera */

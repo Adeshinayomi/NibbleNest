@@ -35,7 +35,7 @@
   width: 100%;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(3,100px);
+  grid-template-columns: repeat(4,100px);
   gap:.4rem;
 }
 .category-btns{
@@ -49,7 +49,7 @@
   justify-content: center;
 }
 .second{
-  width:70%;
+  width:50%;
   display: grid;
   justify-self: center;
   padding: 10px 0;
@@ -83,6 +83,21 @@
   .hero{
     width: 100%;
     height: 55vh;
+    background: var(--bacground-gradient),url('../../images/blueberries-toast-bread-oats-banana-slices-with-coffee-wooden-textured-backdrop.jpg');
+    background-position:bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    align-items: center;
+  }
+  .hero-cont{
+    width: 90%;
+    padding: 20px 0;
+    margin:auto;
+    display: grid;
+    gap: 1.5rem;
+    align-items: center;
+    height: 45vh;
   }
   .hero-cont h1{
     width: 100%;
@@ -94,6 +109,9 @@
   }
   .hero-cont form input{
     width: 100%;
+  }
+  .category-btns-cont{
+    grid-template-columns: repeat(4,80px);
   }
   .recipes{
     grid-template-columns: repeat(2,1fr);
