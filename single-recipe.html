@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Styles -->
   <link rel="stylesheet" href="styles/general/general.css">
+  <link rel="stylesheet" href="styles/pages/single-recipe.css">
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,14 +37,16 @@
   </header>
   <main>
     <section class="recipy">
-      <div class="recipy-image">
-        <img src="" alt="">
-      </div>
-      <div class="recipy-title">
-        <h1>Recipe Title</h1>
-        <div class="recipy-category">
-          <button class="primary-btn">Vegan</button>
-          <button class="primary-btn">Starter</button>
+      <div class="recipy-cont">
+        <div class="recipy-image">
+          <img src="images/trending-img(3).jpg" alt="">
+        </div>
+        <div class="recipy-title">
+          <h1>Meat soup & Potatoes</h1>
+          <div class="recipy-category-btns">
+            <button class="primary-btn">Vegan</button>
+            <button class="primary-btn">Starter</button>
+          </div>
         </div>
       </div>
     </section>
@@ -51,40 +54,49 @@
       <div class="recipy-ingredient">
         <h2>Ingredients</h2>
         <ul>
-          <li>1 cup of flour</li>
-          <li>2 eggs</li>
-          <li>1/2 cup of sugar</li>
-          <li>1 tsp of baking powder</li>
-          <li>1/4 cup of milk</li>
+          <li><img src="images/icons/check.png" alt="">Penne Rigate</li>
+          <li><img src="images/icons/check.png" alt=""> Oilive oil</li>
+          <li><img src="images/icons/check.png" alt="">Garlic</li>
+          <li><img src="images/icons/check.png" alt="">Chopped Tomatoes</li>
+          <li><img src="images/icons/check.png" alt="">Red Chili Flakes</li>
+          <li><img src="images/icons/check.png" alt="">Italian Seasoning</li>
+          <li><img src="images/icons/check.png" alt="">Basil</li>
+          <li><img src="images/icons/check.png" alt="">Salt (optional)</li>
         </ul>
       </div>
       <div class="recipe-measurements">
         <h2>Measurements</h2>
         <ul>
-          <li>1 cup = 240 ml</li>
-          <li>1/2 cup = 120 ml</li>
-          <li>1 tsp = 5 ml</li>
-          <li>1/4 cup = 60 ml</li>
+          <li><img src="images/icons/check.png" alt="">	1 pound</li>
+          <li><img src="images/icons/check.png" alt="">	1/4 cup</li>
+          <li><img src="images/icons/check.png" alt="">3 cloves</li>
+          <li><img src="images/icons/check.png" alt="">1 tin</li>
+          <li><img src="images/icons/check.png" alt="">1/2 teaspoon</li>
+          <li><img src="images/icons/check.png" alt="">	1/2 teaspoon</li>
+          <li><img src="images/icons/check.png" alt="">	6 leaves</li>
+          <li><img src="images/icons/check.png" alt="">	To taste</li>
         </ul>
       </div>
     </section>
     <section class="recipy-instructions">
-      <div class="recipy-vid">
-        <img src="" alt="">
-        <img src="" alt="">
-      </div>
-      <div class="instructions">
-        <h2>Instructions</h2>
-        <p>
-          Preheat the oven to 180°C (350°F).
-          In a bowl, mix the flour, sugar, and baking powder.
-          Add the eggs and milk, and stir until smooth.
-          Pour the mixture into a greased baking dish.
-          Bake for 25-30 minutes or until golden brown.
-        </p>
+      <div class="recipy-instruction-cont">
+        <div class="recipy-vid">
+          <img src="images/trending-img(3).jpg" alt="">
+          <img src="images/icons/play-button (2).png" alt="" class="play-btn">
+        </div>
+        <div class="instructions">
+          <h2>Instructions</h2>
+          <p>
+            Bring a large pot of water to a boil. Add kosher salt, then pasta. Cook according to package directions. <br>
+
+            In a pan, heat the olive oil. Add chopped garlic and sauté for 1-2 minutes. Add chopped tomatoes, red chili flakes, and Italian seasoning. Cook until tomatoes break down and the sauce thickens (about 10 minutes). <br>
+
+            Drain the pasta and add it to the sauce. Toss everything together, add fresh basil, and serve hot with grated cheese if desired. 
+          </p>
+        </div>
       </div>
     </section>
-    <section class="recipy-comments">
+    <!-- <section class="recipy-comments">
       <h2>Comments</h2>
       <div class="comment-form">
         <textarea placeholder="Leave a comment..."></textarea>
@@ -98,8 +110,8 @@
           <p><strong>User2:</strong> I loved it, will make it again!</p>
         </div>
       </div>
-    </section>  
-    <section class="trending-recipes">
+    </section>   -->
+    <section class="trending-recipes related-recipes">
       <div class="trend-header section-header">
         <div class="fancy">
           <img src="images/icons/vintage.png" alt="">
@@ -173,6 +185,48 @@
         <button><img src="images/icons/arrow-right (1).png" alt=""></button>
       </div>
     </section>
+    <footer>
+      <div class="footer-cont">
+        <div class="about">
+          <div class="logo">
+            <img src="images/logo.webp" alt="">
+          </div>
+          <p>
+            Bringing warmth to your kitchen, one recipe at a time. <br>
+            Discover.Cook.Share
+          </p>
+        </div>
+        <section class="nav-cont">
+          <div class="nav-links">
+            <h1>Quick Links</h1>
+            <nav>
+              <li>Home</li>
+              <li>About</li>
+              <li>Sign up</li>
+            </nav>
+          </div>
+          <div class="nav-links">
+            <h1>Recipes</h1>
+            <nav>
+              <li>Dessert</li>
+              <li>Snacks</li>
+              <li>Drinks</li>
+            </nav>
+          </div> 
+          <div class="nav-links">
+            <h1>NibbleNest</h1>
+            <nav>
+              <li>Privacy</li>
+              <li>Terms and Condition</li>
+            </nav>
+          </div>
+        </section>
+      </div>
+       <div class="credit">
+        <p class="copyright">Copyright 2025 NibbleNest.All Rights Reserve</p>
+        <p class="owner">Built by Adeshina</p>
+      </div>
+    </footer>
   </main>
 </body>
 </html>
