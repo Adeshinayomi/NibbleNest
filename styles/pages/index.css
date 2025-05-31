@@ -218,7 +218,7 @@
     width: 80%;
     justify-content:center;
     align-items: end;
-    gap: 2rem;
+    gap: 2rem; 
   } 
   .hero .hero-text{
     width: 100%;

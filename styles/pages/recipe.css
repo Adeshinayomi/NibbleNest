@@ -84,7 +84,7 @@
     width: 100%;
     height: 55vh;
     background: var(--bacground-gradient),url('../../images/blueberries-toast-bread-oats-banana-slices-with-coffee-wooden-textured-backdrop.jpg');
-    background-position:bottom;
+    background-position:bottom bottom;
     background-size: cover;
     background-repeat: no-repeat;
     display: grid;

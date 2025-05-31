@@ -128,6 +128,9 @@ header .header-icon{
   width: 100%;
   height: 4vh;
 }
+.header-icon .hamburger{
+  display: none;
+}
 
 .trending-recipes{
   width: 100%;
@@ -303,6 +306,9 @@ footer .credit{
   }
   header nav{
     display: none;
+  }
+  .header-icon .hamburger{
+    display: flex;
   }
   .footer-cont{
     padding: 0 10px;
