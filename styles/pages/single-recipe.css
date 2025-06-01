@@ -108,3 +108,52 @@
   padding: 40px 0;
   background-color: var(--primary-color);
 }
+
+@media (min-width:300px) and (max-width:500px) {
+  .recipy{
+    height: 45vh;
+  }
+  .recipy-cont{
+   display: flex;
+   flex-direction: column;
+   gap: .5rem;
+  }
+  .recipy-title h1{
+    width: 90%;
+    padding:10px;
+    font-size: var(--subheading-text);
+  }
+  .recipy-category-btns{
+    padding:0 10px;
+  }
+  .recipy-category-btns button{
+    padding: 5px 30px;
+    font-size: var(--small-text);
+  }
+  .recipy-image{
+    height: 40vh;
+  }
+  .recipy-details{
+    padding: 0 10px;   
+    margin-top: 150px;
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .recipy-details h2{
+    font-size: var(--meduim-text);
+  }
+  .recipy-instruction-cont{
+    grid-template-columns: 1fr;
+  }
+  .recipy-instruction-cont .recipy-vid{
+    height: 40vh;
+  }
+  .recipy-instruction-cont .instructions p{
+    font-size: var(--small-text);
+    line-height: 1.5;
+  }
+  .recipy-vid .play-btn{
+    bottom:45%;
+    left:40%;
+  }
+}
