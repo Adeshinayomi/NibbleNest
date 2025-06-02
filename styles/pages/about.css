@@ -170,3 +170,43 @@
   border-radius: var(--card-border-raduis);
   box-shadow: var(--box-shadow);
 }
+
+@media (min-width:300px) and (max-width: 500px) {
+  .hero-cont{
+    grid-template-columns: repeat(1,1fr);
+  }
+  .hero-cont h1{
+    font-size: var(--subheading-text);
+  }
+  .hero-details{
+    width: 100%;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+  .hero-details-card{
+    width: 100%;
+    height: 80px;
+  }
+  .hero-image{
+    height: 50vh;
+  }
+  .about-us{
+    grid-template-columns: repeat(1,1fr);
+    gap: 1rem;
+  }
+  .chef-header h1{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    font-size: var(--subheading-text);
+  }
+  .detail-cont{
+    grid-template-columns: repeat(1,1fr);
+    gap: 1rem;
+  }
+  .chef-cont{
+    grid-template-columns: repeat(1,1fr);
+  }
+  
+}
