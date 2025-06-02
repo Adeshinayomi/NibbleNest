@@ -129,7 +129,8 @@ header .header-icon{
   height: 4vh;
 }
 .header-icon .hamburger{
-  display: none;
+  opacity: 0;
+  transition: all 5s ease .5s;
 }
 
 .trending-recipes{
@@ -370,7 +371,7 @@ footer .credit{
     flex-direction: column;
     justify-content:flex-start;
     padding:40px 20px;
-    transition: all .5s ease;
+    transition: all .5s ease .5s;
     z-index: 3;
   }
   nav a{
@@ -384,7 +385,6 @@ footer .credit{
   .header-icon .hamburger{
     display: flex;
     z-index: 4;
-    transition: all .8s ease 1s;
   }
   .footer-cont{
     padding: 0 10px;

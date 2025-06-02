@@ -37,6 +37,7 @@
  gap: 1rem;
 }
 .hero-details-card{
+  position: relative;
   display: flex;
   padding: 10px;
   justify-content: start;
@@ -51,7 +52,6 @@
   display: flex;
   justify-content: start;
   align-items:center;
-  z-index: 0;
 }
 .hero-details-card .detail-images img{
   width: 25px;
@@ -72,7 +72,6 @@
   display: flex;
   flex-direction:column;
   justify-content: start;
-  z-index: 0;
 }
 .detail-text h4{
   font-size: 12px;
@@ -176,6 +175,10 @@
 @media (min-width:300px) and (max-width: 500px) {
   .hero{
     margin-top: 50px;
+    transition: all .2s ease .7s;
+  }
+  .hero.hide{
+    opacity: 0;
   }
   .hero-cont{
     grid-template-columns: repeat(1,1fr);
