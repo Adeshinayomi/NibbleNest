@@ -82,6 +82,7 @@
 @media (min-width:300px) and (max-width:500px) {
   .hero{
     width: 100%;
+    margin-top: 20px;
     height: 55vh;
     background: var(--bacground-gradient),url('../../images/blueberries-toast-bread-oats-banana-slices-with-coffee-wooden-textured-backdrop.jpg');
     background-position:bottom bottom;

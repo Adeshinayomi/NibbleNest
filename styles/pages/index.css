@@ -207,6 +207,7 @@
 @media (min-width:300px) and (max-width:500px){
   .hero{
     height: 60vh;
+    margin-top: 50px;
     background: var(--bacground-gradient),url('../../images/hero-image.jpg');
     background-repeat:no-repeat;
     background-position:bottom bottom;
@@ -323,9 +324,10 @@
   }
   .testimonies-cont{
     width: 90%;
+    height: fit-content;
     display: flex;
     gap: 1.5rem;
-    padding: 0;
+    padding: 2px 0;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-padding-left: 10px;
