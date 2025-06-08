@@ -1,38 +1,29 @@
 export function pagination(){
-  const prevBtn=document.querySelector('.prev-btn');
-  const nextBtn=document.querySelector('.next-btn');
-  const recipeCard=document.querySelectorAll('.js-recipe-card');
+  const prevBtn=document.querySelectorAll('.prev-btn');
+  const nextBtn=document.querySelectorAll('.next-btn');
+  const recipeCont=document.querySelector('.js-recipes-cont')
 
-  let counter=1
-  nextBtn.addEventListener('click',()=>{
-    if(counter<4){
-      recipeCard.forEach((recipeCard=>{
-        recipeCard.style.transform=`translateX(-${counter*110}%)`
-      }))
-      counter++
-      console.log(counter)
-    }else{
-      counter=0
-      recipeCard.forEach((recipeCard=>{
-        recipeCard.style.transform=`translateX(-${counter*110}%)`
-      }))
-      console.log(counter)
-    }
-    
+  let counter=0
+  nextBtn.forEach((btn)=>{
+    btn.addEventListener('click',()=>{
+      if(counter<3){
+        counter++
+        recipeCont.scrollLeft=counter*350
+      }else{
+        counter=0
+        recipeCont.scrollLeft=counter*100
+      } 
+    })
   })
-  prevBtn.addEventListener('click',()=>{
-    if(counter>0){
-      counter--
-      recipeCard.forEach((recipeCard=>{
-       recipeCard.style.transform=`translateX(-${counter*110}%)`
-      }))
-      console.log(counter)
-    }else{
-      counter=3
-      recipeCard.forEach((recipeCard=>{
-       recipeCard.style.transform=`translateX(-${counter*110}%)`
-      }))
-      console.log(counter)
-    }
+  prevBtn.forEach((btn)=>{
+    btn.addEventListener('click',()=>{
+      if(counter>0){ 
+        counter--
+        recipeCont.scrollLeft=counter*350
+      }else{
+        counter=3
+        recipeCont.scrollLeft=counter*300
+      }
+   })
   })
 }

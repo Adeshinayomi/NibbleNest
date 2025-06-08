@@ -129,7 +129,7 @@ header .header-icon{
   height: 4vh;
 }
 .header-icon .hamburger{
-  opacity: 0;
+  display: none;
   transition: all 5s ease .5s;
 }
 
@@ -157,8 +157,8 @@ header .header-icon{
   overflow-x: auto;
   scroll-behavior: smooth;
   scrollbar-width: none; 
-  -ms-overflow-style: none; 
-}
+  -ms-overflow-style: none;
+} 
  
 .recipe-card{
   width: 300px;
@@ -251,6 +251,13 @@ header .header-icon{
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 2rem;
+  transition: all 1s ease;
+}
+.js-recipes-cont{
+  transition: all 1s ease;  
+}
+.js-recipes-cont .testimony-card{
+  transition: all 1s ease;  
 }
 .testimony-card{
   width: 100%;
@@ -264,6 +271,7 @@ header .header-icon{
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  transition: all 1s ease;
 }
 .testimony-card .stars{
   width: 100%;
@@ -386,7 +394,14 @@ footer .credit{
   }
   .header-icon .hamburger{
     display: flex;
-    z-index: 4;
+    z-index: 4;   
+    opacity: 1;
+  }
+  .js-hero{
+    transition: all .2s ease .7s;
+  }
+  .js-hero.hide{
+    opacity: 0;
   }
   .footer-cont{
     padding: 0 10px;
@@ -484,6 +499,7 @@ footer .credit{
     gap: 1.5rem;
     padding: 0;
     overflow-x: auto;
+    scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     scroll-padding-left: 10px;
   }

@@ -123,7 +123,7 @@
   font-weight: var(--bold-text);
 }
 
-.testimonies{
+/* .testimonies{
   width: 100%;
   margin-top: 100px;
   padding: 50px 0;
@@ -175,7 +175,7 @@
 }
 .testimony-nav-btn{
   display: none;
-}
+} */
 .CTA{
   width: 100%;
   margin-top: 70px;
@@ -311,7 +311,7 @@
   .explore-cont p{
     width: 70%;
   }
-  .testimonies{
+  /* .testimonies{
     width: 100%;
     margin-top: 100px;
     padding: 50px 0;
@@ -333,20 +333,20 @@
     scroll-padding-left: 10px;
   }
   .testimonies-cont::-webkit-scrollbar{
-    display: none; /* Chrome, Safari and Opera */
-  }
-  .testimony-card{
+    display: none; 
+  } 
+  /* .testimony-card{
     flex: 0 0 80%;
     max-width: 300px;
     height: 300px;
     scroll-snap-align: start;
-  }
-  .testimony-card .testimony p{
+  } */
+  /* .testimony-card .testimony p{
     font-size: var(--small-text);
-  }
-  .testimony-nav-btn{
+  } */
+  /* .testimony-nav-btn{
     display: flex;
-  }
+  } */
   .CTA-cont h1{
     width: 90%;
   }
