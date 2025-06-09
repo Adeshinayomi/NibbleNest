@@ -1,16 +1,11 @@
-let recipes = [];
-async function fetchRecipes() {
-  try {
-    const response = await fetch("https://www.themealdb.com/api/json/v1/1/categories.php");
-    if (!response.ok) {
-      throw new Error("Failed to fetch Recipes");
+export let allRecipes=[]
+export  async function fetchAllRecipes(){
+    const letters='abcdefghijklmnopqrstuvwxyz'
+    for(let letter of letters){
+        const response=await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${letter}`);
+        const data= await response.json();
+        if(data.meals){
+            allRecipes.push(...data.meals)
+        }
     }
-    const data = await response.json();
-    recipes=data.categories
-    console.log(recipes);
-  } catch (error) {
-    console.error("Error fetching Recipes:", error);
-    return [];
-  }
-}
-console.log(fetchRecipes())
+ }

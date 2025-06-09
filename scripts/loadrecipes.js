@@ -1,0 +1,34 @@
+import {fetchAllRecipes,allRecipes} from "../data/recipe.js";
+async function loadRecipe(){
+  await fetchAllRecipes()
+  
+  let html=``
+  for(let i=0;i<=6-1;i++){
+    const index=(Math.round(Math.random()*(allRecipes.length-1)));
+    const recipe=allRecipes[index];
+    html+=`
+            <div class="recipe-card js-recipe-card">
+          <div class="recipe-image">
+            <img src="${recipe.strMealThumb}" alt="">
+          </div>
+          <div class="recipe-detail">
+            <div class="name">
+              <h4>${recipe.strMeal}</h4>
+              <span class="rating">
+                <span>4.5</span>
+                <div class="star">
+                  <img src="images/icons/star (2).png" alt="">
+                </div>
+              </span>
+            </div>
+            <button class="primary-btn">
+              <span>view recipe</span>
+              <img src="images/icons/arrow-right (1).png" alt="">
+            </button>
+          </div>
+        </div>
+    `
+  }
+  document.querySelector(".js-recipes-cont").innerHTML=html;
+}
+loadRecipe()

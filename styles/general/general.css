@@ -439,12 +439,12 @@ footer .credit{
     width: 95%; 
     grid-template-columns: repeat(2,1fr);
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1rem;
     overflow-x:visible;
   }
   .recipe-card{
     width: 160px;
-    height: 250px;
+    height: 260px;
   }
   .recipe-card .recipe-image{
     width: 100%;
@@ -452,7 +452,7 @@ footer .credit{
   }
   .recipe-card .recipe-detail{
     height: 100px;
-    gap: 1.5rem;
+    gap:.5rem;
   }
   .recipe-card .recipe-detail h4{
     font-size:var(--small-text);
