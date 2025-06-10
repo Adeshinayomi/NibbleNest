@@ -1,8 +1,8 @@
 import {fetchAllRecipes,allRecipes} from "../data/recipe.js";
-async function loadRecipe(){
+  let html=``
+export async function loadRecipe(){
   await fetchAllRecipes()
   
-  let html=``
   for(let i=0;i<=6-1;i++){
     const index=(Math.round(Math.random()*(allRecipes.length-1)));
     const recipe=allRecipes[index];
@@ -31,4 +31,6 @@ async function loadRecipe(){
   }
   document.querySelector(".js-recipes-cont").innerHTML=html;
 }
-loadRecipe()
+
+
+

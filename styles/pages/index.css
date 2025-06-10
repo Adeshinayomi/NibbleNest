@@ -255,7 +255,7 @@
   .category-card h4{
     font-size: var(--small-text);
   }
-  .recipes-cont{
+  /* .recipes-cont{
     width: 95%; 
     grid-template-columns: repeat(2,1fr);
     justify-content: center;
@@ -287,7 +287,7 @@
   .recipe-detail button img{
     width: 10px;
     height: 10px;
-  }
+  } */
   .recipe-nav-btn{
     display:none;
   }
