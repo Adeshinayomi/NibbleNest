@@ -35,7 +35,7 @@
       </div>
     </div>
   </header>
-  <main>
+  <main class="js-recipy">
     <section class="recipy js-hero">
       <div class="recipy-cont">
         <div class="recipy-image">
@@ -96,29 +96,15 @@
         </div>
       </div>
     </section>
-    <!-- <section class="recipy-comments">
-      <h2>Comments</h2>
-      <div class="comment-form">
-        <textarea placeholder="Leave a comment..."></textarea>
-        <button class="primary-btn">Submit</button>
-      </div>
-      <div class="comments-list">
-        <div class="comment">
-          <p><strong>User1:</strong> This recipe is amazing!</p>
-        </div>
-        <div class="comment">
-          <p><strong>User2:</strong> I loved it, will make it again!</p>
-        </div>
-      </div>
-    </section>   -->
-    <section class="trending-recipes related-recipes">
+  </main>
+  <section class="trending-recipes related-recipes">
       <div class="trend-header section-header">
         <div class="fancy">
           <img src="images/icons/vintage.png" alt="">
         </div>
         <h1>Related Recipies</h1>
       </div>
-      <div class="recipes-cont">
+      <div class="recipes-cont js-slider js-recipes-cont">
         <div class="recipe-card">
           <div class="recipe-image">
             <img src="images/trending-img(1).jpg" alt="">
@@ -204,8 +190,8 @@
         <button><img src="images/icons/arrow-left (1).png" alt=""></button>
         <button><img src="images/icons/arrow-right (1).png" alt=""></button>
       </div>
-    </section>
-    <footer>
+  </section>
+  <footer>
       <div class="footer-cont">
         <div class="about">
           <div class="logo">
@@ -247,8 +233,22 @@
         <p class="owner">Built by Adeshina</p>
       </div>
     </footer>
-  </main>
-
-  <script type="module" src="scripts/Nibble.js"></script>
+  <script type="module" src="scripts/renderRecipes.js"></script>
 </body>
 </html>
+
+    <!-- <section class="recipy-comments">
+      <h2>Comments</h2>
+      <div class="comment-form">
+        <textarea placeholder="Leave a comment..."></textarea>
+        <button class="primary-btn">Submit</button>
+      </div>
+      <div class="comments-list">
+        <div class="comment">
+          <p><strong>User1:</strong> This recipe is amazing!</p>
+        </div>
+        <div class="comment">
+          <p><strong>User2:</strong> I loved it, will make it again!</p>
+        </div>
+      </div>
+    </section>   -->

@@ -1,4 +1,4 @@
-import {fetchAllRecipes,allRecipes} from "../data/recipe.js";
+import {fetchAllRecipes,allRecipes} from "../../data/recipe.js";
   let html=``
 export async function loadRecipe(){
   await fetchAllRecipes()
@@ -21,7 +21,7 @@ export async function loadRecipe(){
                 </div>
               </span>
             </div>
-            <button class="primary-btn">
+            <button class="primary-btn js-view-recipe-btn" data-recipe-id="${recipe.idMeal}">
               <span>view recipe</span>
               <img src="images/icons/arrow-right (1).png" alt="">
             </button>
@@ -30,6 +30,13 @@ export async function loadRecipe(){
     `
   }
   document.querySelector(".js-recipes-cont").innerHTML=html;
+  document.querySelectorAll('.js-view-recipe-btn').forEach((btn)=>{
+    btn.addEventListener('click',()=>{
+      const recipeId=btn.dataset.recipeId
+      window.location=`single-recipe.html?id=${recipeId}`
+    })
+  })
+
 }
 
 
