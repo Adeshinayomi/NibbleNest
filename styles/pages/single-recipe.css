@@ -1,7 +1,6 @@
 .recipy{
   width: 100%;
   margin-top:10px;
-  height:70vh;
 }
 .recipy-cont{
   width: 95%;
@@ -14,10 +13,11 @@
 }
 .recipy-image{
   width: 100%;
-  height: 40vh;
+  height: 65vh;
 }
 .recipy-image img{
   width: 100%;
+  height:100%;
   border-radius: var(--card-border-raduis);
 }
 .recipy-title{
@@ -111,7 +111,8 @@
 
 @media (min-width:300px) and (max-width:500px) {
   .recipy{
-    height: 45vh;
+    height: 60vh;
+    margin-top: 100px;
   }
   .recipy-cont{
    display: flex;
@@ -135,7 +136,7 @@
   }
   .recipy-details{
     padding: 0 10px;   
-    margin-top: 150px;
+    margin-top:50px;
     flex-direction: row;
     gap: 2rem;
   }
