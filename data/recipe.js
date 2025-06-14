@@ -10,6 +10,15 @@ export function getRecipes(recipesId){
     })
       return  matchingRecipes
 }
+export function getRecipesByCategories(category){
+    let categoryRecipes=[]
+    allRecipes.forEach((recipes)=>{
+        if(recipes.strCategory.toLowerCase() === category){
+            categoryRecipes.push(recipes);
+        }
+    })
+    return categoryRecipes;
+  }
 getRecipes('52772') // Example call to getRecipes
 export  async function fetchAllRecipes(){
     const letters='abcdefghijklmnopqrstuvwxyz'
