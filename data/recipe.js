@@ -10,13 +10,23 @@ export function getRecipes(recipesId){
     })
       return  matchingRecipes
 }
+export function searchRecipes(searchItem){
+    let matchingRecipes=[]
+    allRecipes.forEach((recipe)=>{
+        const name=recipe.strMeal
+        if(name.toLowerCase().includes(searchItem.toLowerCase())){
+            matchingRecipes.push(recipe)
+        }
+    })
+    return matchingRecipes; 
+}
 export function getRecipesByCategories(category){
-    let categoryRecipes=[]
+    let categoryRecipes=[] 
     allRecipes.forEach((recipes)=>{
         if(recipes.strCategory.toLowerCase() === category){
             categoryRecipes.push(recipes);
         }
-    })
+    }) 
     return categoryRecipes;
   }
 getRecipes('52772') // Example call to getRecipes
