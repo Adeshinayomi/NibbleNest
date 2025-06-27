@@ -230,10 +230,10 @@
   .hero-text p{
     letter-spacing: .05rem;
   }
-  .hero-cont form{
+  .hero-cont div{
     width: 100%;
   }
-  .hero-cont form input{
+  .hero-cont div input{
     width: 100%;
   }
   .categories-cont{

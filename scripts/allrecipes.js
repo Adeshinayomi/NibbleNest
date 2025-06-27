@@ -2,10 +2,12 @@ import {fetchAllRecipes,allRecipes,getRecipesByCategories,searchRecipes} from ".
 import { loadRecipe } from "./component/TrendingRecipes.js";
 import { toggleSideBar } from "./component/header.js";
 import { pagination } from "./component/pagination.js";
+import { search } from "./component/searchRecipes.js";
 toggleSideBar()
-pagination();
- 
-loadRecipe();
+pagination()
+search()
+loadRecipe()
+
 let currentPage=1;
 const recipesPerPage=6;
 
@@ -56,6 +58,20 @@ async function renderAllRecipes(){
         window.location=`single-recipe.html?id=${recipeId}`
       })
     })
+  })
+
+  document.querySelector('.js-recipe-prev-btn').addEventListener('click',()=>{
+    if(currentPage>1){
+      currentPage--
+      renderAllRecipes()
+    }
+  })
+  document.querySelector('.js-recipe-next-btn').addEventListener('click',()=>{
+    const totalPages=Math.ceil(allRecipes.length/recipesPerPage);
+    if(currentPage<totalPages){
+      currentPage++
+      renderAllRecipes()
+    }
   })
 
 }
@@ -110,6 +126,20 @@ async function renderCategoryRecipes(){
       })
     })
   })
+  document.querySelector('.js-recipe-prev-btn').addEventListener('click',()=>{
+    if(currentPage>1){
+      currentPage--
+      renderCategoryRecipes()
+    }
+  })
+
+  document.querySelector('.js-recipe-next-btn').addEventListener('click',()=>{
+    const totalPages=Math.ceil(categoryRecipes.length/recipesPerPage);
+    if(currentPage<totalPages){
+      currentPage++
+      renderCategoryRecipes()
+    }
+  })
 }
 async function renderSearchRecipes(){
   await fetchAllRecipes()  
@@ -162,7 +192,33 @@ async function renderSearchRecipes(){
       })
     })
   })
+
+  document.querySelector('.js-recipe-prev-btn').addEventListener('click',()=>{
+    if(currentPage>1){
+      currentPage--
+      renderSearchRecipes()
+    }
+  })
+  document.querySelector('.js-recipe-next-btn').addEventListener('click',()=>{
+    const totalPages=Math.ceil(recipes.length/recipesPerPage);
+    if(currentPage<totalPages){
+      currentPage++
+      renderSearchRecipes()
+    }
+  })
 }
+
+document.querySelectorAll('.category-btns').forEach((btn)=>{
+    btn.addEventListener('click',(e)=>{
+        document.querySelectorAll('.category-btns').forEach((btn)=>{
+          btn.classList.remove('active')
+        })
+        e.target.classList.add('active')
+        Recipes=allRecipes.filter((recipe)=>{
+          return recipe.strCategory.toLowerCase() === e.target.innerHTML.toLowerCase()
+        })
+    })
+  })
 
 if(window.location.search.includes('category')){
   renderCategoryRecipes()
@@ -171,17 +227,3 @@ if(window.location.search.includes('category')){
 } else {
   renderAllRecipes()
 }
-
-document.querySelector('.js-recipe-prev-btn').addEventListener('click',()=>{
-  if(currentPage>1){
-    currentPage--
-    renderAllRecipes('right')
-  }
-})
-document.querySelector('.js-recipe-next-btn').addEventListener('click',()=>{
-  const totalPages=Math.ceil(allRecipes.length/recipesPerPage);
-  if(currentPage<totalPages){
-    currentPage++
-    renderAllRecipes('left')
-  }
-})
