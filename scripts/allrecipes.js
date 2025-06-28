@@ -3,6 +3,7 @@ import { loadRecipe } from "./component/TrendingRecipes.js";
 import { toggleSideBar } from "./component/header.js";
 import { pagination } from "./component/pagination.js";
 import { search } from "./component/searchRecipes.js";
+import { addRecipe } from "./component/addRecipe.js";
 toggleSideBar()
 pagination()
 search()
@@ -24,6 +25,9 @@ async function renderAllRecipes(){
       `
        <div class="recipe-card js-recipe-card">
           <div class="recipe-image">
+            <div class="js-favourite-icon favourite-icon">
+             <img class="add-recipe" data-id="${recipe.idMeal}" src="images/icons/heart (3).png" alt="">
+            </div>
             <img src="${recipe.strMealThumb}" alt="">
           </div>
           <div class="recipe-detail">
@@ -58,6 +62,7 @@ async function renderAllRecipes(){
         window.location=`single-recipe.html?id=${recipeId}`
       })
     })
+    addRecipe()
   })
 
   document.querySelector('.js-recipe-prev-btn').addEventListener('click',()=>{
@@ -91,6 +96,9 @@ async function renderCategoryRecipes(){
     `
        <div class="recipe-card js-recipe-card">
           <div class="recipe-image">
+            <div class="js-favourite-icon favourite-icon">
+             <img class="add-recipe" data-id="${recipe.idMeal}" src="images/icons/heart (3).png" alt="">
+            </div>
             <img src="${recipe.strMealThumb}" alt="">
           </div>
           <div class="recipe-detail">
@@ -125,6 +133,7 @@ async function renderCategoryRecipes(){
         window.location=`single-recipe.html?id=${recipeId}`
       })
     })
+    addRecipe()
   })
   document.querySelector('.js-recipe-prev-btn').addEventListener('click',()=>{
     if(currentPage>1){
@@ -157,6 +166,9 @@ async function renderSearchRecipes(){
     `
        <div class="recipe-card js-recipe-card">
           <div class="recipe-image">
+            <div class="js-favourite-icon favourite-icon">
+             <img class="add-recipe" data-id="${recipe.idMeal}" src="images/icons/heart (3).png" alt="">
+            </div>
             <img src="${recipe.strMealThumb}" alt="">
           </div>
           <div class="recipe-detail">
@@ -191,6 +203,7 @@ async function renderSearchRecipes(){
         window.location=`single-recipe.html?id=${recipeId}`
       })
     })
+    addRecipe()
   })
 
   document.querySelector('.js-recipe-prev-btn').addEventListener('click',()=>{
@@ -214,12 +227,12 @@ document.querySelectorAll('.category-btns').forEach((btn)=>{
           btn.classList.remove('active')
         })
         e.target.classList.add('active')
-        Recipes=allRecipes.filter((recipe)=>{
-          return recipe.strCategory.toLowerCase() === e.target.innerHTML.toLowerCase()
-        })
+        // Recipes=allRecipes.filter((recipe)=>{
+        //   return recipe.strCategory.toLowerCase() === e.target.innerHTML.toLowerCase()
+        // })
     })
   })
-
+  
 if(window.location.search.includes('category')){
   renderCategoryRecipes()
 }else if(window.location.search.includes('search')){

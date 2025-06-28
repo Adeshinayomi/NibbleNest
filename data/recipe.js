@@ -1,14 +1,12 @@
 export let allRecipes=[]
 export function getRecipes(recipesId){
-           let matchingRecipes;
+    let matchingRecipes;
     allRecipes.forEach((recipe)=>{
-
         if(recipe.idMeal===recipesId){
            matchingRecipes=recipe
-        }
-      
+        }  
     })
-      return  matchingRecipes
+    return  matchingRecipes
 }
 export function searchRecipes(searchItem){
     let matchingRecipes=[]
@@ -28,8 +26,7 @@ export function getRecipesByCategories(category){
         }
     }) 
     return categoryRecipes;
-  }
-getRecipes('52772') // Example call to getRecipes
+}
 export  async function fetchAllRecipes(){
     const letters='abcdefghijklmnopqrstuvwxyz'
     for(let letter of letters){

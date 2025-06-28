@@ -1,4 +1,5 @@
 import {fetchAllRecipes,allRecipes} from "../../data/recipe.js";
+import {addRecipe} from "./addRecipe.js";
   let html=``
 export async function loadRecipe(){
   await fetchAllRecipes()
@@ -7,8 +8,11 @@ export async function loadRecipe(){
     const index=(Math.round(Math.random()*(allRecipes.length-1)));
     const recipe=allRecipes[index];
     html+=`
-            <div class="recipe-card js-recipe-card">
+        <div class="recipe-card js-recipe-card">
           <div class="recipe-image">
+            <div class="js-favourite-icon favourite-icon">
+             <img class="add-recipe" data-id="${recipe.idMeal}" src="images/icons/heart (3).png" alt="">
+            </div>
             <img src="${recipe.strMealThumb}" alt="">
           </div>
           <div class="recipe-detail">
@@ -36,7 +40,7 @@ export async function loadRecipe(){
       window.location=`single-recipe.html?id=${recipeId}`
     })
   })
-
+  addRecipe();
 }
 
 

@@ -1,0 +1,1 @@
+export let favouriteRecipe=JSON.parse(localStorage.getItem('favorite'))||[]
