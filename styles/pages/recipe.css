@@ -17,11 +17,11 @@
   width: 40%;
 }
 
-.hero-cont div{
+.hero-cont .form{
   flex-direction: row;
   justify-content:start;
 }
-.hero-cont div input{
+.hero-cont .form input{
   width: 50%;
 }  
 .categories{
@@ -136,12 +136,12 @@
   .hero-cont h1{
     width: 100%;
   }
-  .hero-cont div{
+  .hero-cont .form{
     width: 100%;
     flex-direction: column;
     justify-content:center;
   }
-  .hero-cont div input{
+  .hero-cont .form input{
     width: 100%;
   }
   .category-btns-cont{

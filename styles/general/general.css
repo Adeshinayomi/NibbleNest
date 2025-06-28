@@ -62,7 +62,7 @@ p,span,a{
   color: var(--primary-color);
   font-size: var(--small-text);
 }
-.hero-cont div{
+.hero-cont .form{
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -71,7 +71,7 @@ p,span,a{
   gap: 1rem;
   /* border: 2px solid; */
 }
-.hero-cont div input{
+.hero-cont .form input{
   border: 1px solid rgba(105, 63, 63, 0.632);
   width: 80%;
   padding: 10px 20px;
