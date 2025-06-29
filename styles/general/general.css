@@ -12,6 +12,7 @@
   --secondary-color:#FFF0D8;
   --accent-color:#7C4F28;
   --bacground-gradient:linear-gradient(#fff0d84a,#FFF0D8);
+  /* --bacground-gradient:linear-gradient(#FFF0D8,#000000a2); */
   --box-shadow:2px 2px 2px 2px #9b8e8e87;
   --card-border-raduis:10px;
   --button-border-raduis:100px;

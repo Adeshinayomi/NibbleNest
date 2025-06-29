@@ -21,14 +21,14 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="recipe.html">Recipe</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="">Sign up</a></li>
+      <li class="toggle-modal sign-up">Sign up</li>
     </nav>
     <div class="header-icon">
       <div class="fav-icon">
         <a href="favourite.html"><img src="images/icons/heart (3).png" alt=""></a>
       </div>
       <div class="user-icon">
-        <img src="images/icons/profile-user (4).png" alt="">
+        <img class="toggle-modal" src="images/icons/profile-user (4).png" alt="">
       </div>
       <div class="hamburger js-hamburger">
         <img src="images/icons/hamburger.png" alt="">
@@ -49,15 +49,15 @@
   </section>
   <section class="modal">
     <div class="modal-cont">
-      <img src="images/icons/cancel.png" alt="">
+      <img class="cancel-modal" src="images/icons/cancel.png" alt="">
       <div class="modal-header">
         <h1>Sign Up</h1>
         <p> Sign up to save recipes,and access profile setting</p>
       </div>
       <form class="modal-form">
-        <input type="text" placeholder="Username" required>
-        <input type="text" placeholder="Email Address" required>
-        <input type="password" placeholder="Password" required>
+        <input class="name" type="text" placeholder="Username" required>
+        <input class="email" type="email" placeholder="Email Address" required>
+        <input class="password" type="password" placeholder="Password" required>
         <button type="submit" class="secondary-btn">Sign Up</button>
       </form>
       <p>Already have an account?<span class="login-btn">Login</span></p>
