@@ -3,4 +3,4 @@ export  function search(){
     const searchItem=document.querySelector('.js-search-string')
     window.location=`recipe.html?search=${searchItem.value}`
   })
-}
+} 
