@@ -197,7 +197,27 @@ header .header-icon{
   display: none;
   transition: all 5s ease .5s;
 }
-
+.user-icon{
+  position: relative;
+}
+.user-icon .user-info{
+  position: absolute;
+  right: 0;
+  padding: 10px;
+  background-color: var(--primary-color);
+  display:grid;
+  gap: 2rem;
+  display: none;
+}
+.user-info.show-user{
+  display:grid;
+}
+.user-info button{
+  border: 1px solid var(--accent-color);
+  padding:5px;
+  border-radius:var(--button-border-raduis) ;
+  background-color: var(--primary-color);
+}
 .trending-recipes{
   width: 100%;
   margin-top: 100px;

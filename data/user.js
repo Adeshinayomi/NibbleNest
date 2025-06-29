@@ -1,7 +1,7 @@
 export let isUserSignedIn=JSON.parse(localStorage.getItem('signIn'))||false
 
-export function changeSignInValue(){
-  isUserSignedIn = true
+export function changeSignInValue(value){
+  isUserSignedIn = value
   localStorage.setItem('signIn',JSON.stringify(isUserSignedIn))
 }
 
