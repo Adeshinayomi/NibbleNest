@@ -44,6 +44,9 @@ p,span,a{
   color: var(--accent-color);
   font-weight: var(--light-text);
 }
+li,a,img,button{
+  cursor:pointer;
+}
 .primary-btn{
   border: 2px solid var(--accent-color);
   padding: 10px 20px;
@@ -52,6 +55,7 @@ p,span,a{
   font-weight: var(--bold-text);
   font-size: var(--small-text);
   color: var(--accent-color);
+  cursor:pointer;
 }
 .secondary-btn{
   border:none;
@@ -61,6 +65,7 @@ p,span,a{
   font-weight: var(--bold-text);
   color: var(--primary-color);
   font-size: var(--small-text);
+  cursor: pointer;
 }
 
 .hero-cont .form{
@@ -187,7 +192,12 @@ header .header-icon{
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: var(--box-shadow);
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.955));
+}
+.recipe-image .favourite-icon img{
+  width: 100%;
+  height:100%;
+    filter:brightness(100);
 }
 .recipe-image img{
   width: 100%;

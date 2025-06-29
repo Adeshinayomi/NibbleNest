@@ -138,3 +138,6 @@ document.querySelector('.js-clear-favorites').addEventListener('click',()=>{
   allRecipe.length=0;
   renderStuff()
 })
+document.querySelector('.back-icon').addEventListener('click',()=>{
+  history.back();
+})
