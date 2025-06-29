@@ -67,7 +67,62 @@ li,a,img,button{
   font-size: var(--small-text);
   cursor: pointer;
 }
-
+.modal{
+  width: 100%;
+  height: 100vh;
+  padding: 50px 0;
+  background: var(--bacground-gradient);
+  position:fixed;
+  top:30px;
+  display: grid;
+  align-items: start;
+  display: none;
+}
+.modal .modal-cont{
+  width: 35%;
+  margin: auto;
+  padding: 20px;
+  background-color: var(--primary-color);
+  border-radius: var(--card-border-raduis);
+  display: grid;
+  gap: 1rem;
+}
+.modal-cont img{
+  display: flex;
+  justify-content: end;
+  width: 30px;
+  height: 30px;
+}
+.modal-cont .modal-header{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+}
+.modal-header p{
+  width: 80%;
+  text-align: center;
+}
+.modal-cont form{
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+}
+.modal-cont form input{
+  width: 100%;
+  padding: 20px;
+  border: none;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--card-border-raduis); 
+}
+.modal-cont p{
+  text-align: center;
+}
+.modal-cont p span{
+  color: purple;
+  text-decoration: underline;
+}
 .hero-cont .form{
   width: 70%;
   display: flex;
@@ -429,6 +484,9 @@ footer .credit{
   }
   .js-hero.hide{
     opacity: 0;
+  }
+  .modal .modal-cont{
+    width: 95%;
   }
   .footer-cont{
     padding: 0 10px;
