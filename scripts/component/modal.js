@@ -8,10 +8,17 @@ export function toggleModal(){
   }
   
   document.querySelectorAll('.toggle-modal').forEach((btn)=>{
-
     btn.addEventListener('click',()=>{
 
       if(isUserSignedIn === false){
+        const hamBurger=document.querySelector('.js-hamburger');
+        const sideBar=document.querySelector('.js-sidebar')
+        const hero=document.querySelector('.js-hero')
+        hamBurger.innerHTML='<img src="images/icons/hamburger.png" alt="">'
+
+        hero.classList.remove('hide')
+        hamBurger.classList.toggle('grow')
+        sideBar.classList.remove('visible');
         document.querySelector('.modal').style.display="block"
       }
 
@@ -19,10 +26,12 @@ export function toggleModal(){
 
   })
 
-  document.querySelector('.cancel-modal').addEventListener('click',()=>{
+  document.querySelectorAll('.cancel-modal').forEach((btn)=>{
+    btn.addEventListener('click',()=>{
 
-    document.querySelector('.modal').style.display="none"
+     document.querySelector('.modal').style.display="none"
 
+    })
   })
 
   document.querySelector('.modal-form').addEventListener("submit",(e)=>{
@@ -41,7 +50,7 @@ export function toggleModal(){
     document.querySelector('.user-name').innerHTML=name.value 
     document.querySelector('.modal').style.display="none"
     window.location='index.html'
-    
+
   })
 
   document.querySelector('.profile').addEventListener('click',()=>{
@@ -65,5 +74,32 @@ export function toggleModal(){
       document.querySelector('.modal').style.display="block"
     }
 
+  })
+
+
+  document.querySelectorAll('.modal-btn').forEach((btn)=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.modal-cont').forEach((modal)=>{
+        modal.classList.toggle('hide-modal')
+      })
+    })
+  })
+
+
+  document.querySelector('.login-form').addEventListener("submit",(e)=>{
+
+    const email=document.querySelector('.login-email')
+    const password=document.querySelector('.login-password')
+
+    e.preventDefault()
+      user.forEach((info)=>{
+        console.log(email.value)
+        if(email.value === info.email && password.value === info.password){
+          changeSignInValue(true)
+          document.querySelector('.user-name').innerHTML=info.name
+          document.querySelector('.modal').style.display="none"
+          window.location='index.html'
+        }
+      })
   })
 }

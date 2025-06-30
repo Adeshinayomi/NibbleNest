@@ -52,7 +52,7 @@
     </div>
   </section>
   <section class="modal">
-    <div class="modal-cont">
+    <div class="modal-cont sign-up">
       <img class="cancel-modal" src="images/icons/cancel.png" alt="">
       <div class="modal-header">
         <h1>Sign Up</h1>
@@ -64,7 +64,19 @@
         <input class="password" type="password" placeholder="Password" required>
         <button type="submit" class="secondary-btn">Sign Up</button>
       </form>
-      <p>Already have an account?<span class="login-btn">Login</span></p>
+      <p>Already have an account?<span class="login-btn modal-btn">Login</span></p>
+    </div>
+    <div class="modal-cont login">
+      <img class="cancel-modal" src="images/icons/cancel.png" alt="">
+      <div class="modal-header">
+        <h1>Welcome Back</h1>
+      </div>
+      <form class="login-form">
+        <input class="login-email" type="email" placeholder="Email Address" required>
+        <input class="login-password" type="password" placeholder="Password" required>
+        <button type="submit" class="secondary-btn">Login</button>
+      </form>
+      <p>Don't have an account?<span class="sign-btn modal-btn">Sign Up</span></p>
     </div>
   </section>
   <main>
@@ -222,7 +234,7 @@
             <nav>
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About</a></li>
-              <li><a href="">Sign up</a></li>
+              <li class="toggle-modal">Sign up</li>
             </nav>
           </div>
           <div class="nav-links">

@@ -88,6 +88,15 @@ li,a,img,button{
   display: grid;
   gap: 1rem;
 }
+.modal-cont.login{
+  display: none;
+}
+.modal-cont.login.hide-modal{
+  display: grid;
+}
+.modal-cont.sign-up.hide-modal{
+  display: none;
+}
 .modal-cont img{
   display: flex;
   justify-content: end;
@@ -123,6 +132,7 @@ li,a,img,button{
 .modal-cont p span{
   color: purple;
   text-decoration: underline;
+  cursor: pointer;
 }
 .hero-cont .form{
   width: 70%;
@@ -182,6 +192,9 @@ header nav{
   display: flex;
   gap: 2rem;
   justify-content: center;
+}
+header nav li{
+  color: var(--accent-color);
 }
 header .header-icon{
   display: flex;
@@ -491,6 +504,10 @@ footer .credit{
     font-size:var(--meduim-text);
     font-weight:var(--bold-text);
   }
+  nav li{
+    font-size:var(--meduim-text);
+    font-weight:var(--bold-text);
+  }
   nav.visible{
     right: 0%;
     opacity: 1;
@@ -499,6 +516,13 @@ footer .credit{
     display: flex;
     z-index: 4;   
     opacity: 1;
+  }
+  .user-icon{
+    position: relative;
+  }
+  .user-icon .user-info{
+    position: absolute;
+    right: -50px;
   }
   .js-hero{
     transition: all .2s ease .7s;
@@ -528,6 +552,11 @@ footer .credit{
   }
   .nav-links h1{
     font-size: var(--meduim-text);
+  }
+  .nav-links nav li a{
+    font-size:var(--small-text);
+    color: var(--accent-color);
+    font-weight: var(--light-text);
   }
   footer .credit{
     grid-template-columns: repeat(1,1fr);
