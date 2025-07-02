@@ -4,6 +4,9 @@ import { toggleSideBar } from "./component/header.js";
 import { pagination } from "./component/pagination.js";
 import { search } from "./component/searchRecipes.js";
 import { addRecipe } from "./component/addRecipe.js";
+import {toggleModal } from "./component/modal.js";
+
+toggleModal()
 toggleSideBar()
 pagination()
 search()

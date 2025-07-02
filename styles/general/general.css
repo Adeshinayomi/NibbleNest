@@ -74,6 +74,7 @@ li,a,img,button{
   padding: 50px 0;
   background: var(--bacground-gradient);
   position:fixed;
+  z-index:90;
   top:30px;
   display: grid;
   align-items: start;

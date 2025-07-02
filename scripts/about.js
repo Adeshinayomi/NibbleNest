@@ -1,6 +1,9 @@
 import { pagination } from "./component/pagination.js";
 import { toggleSideBar } from "./component/header.js";
 import { countDown } from "./component/countDown.js";
+import {toggleModal } from "./component/modal.js";
+
+toggleModal()
 pagination()
 toggleSideBar()
 countDown("activeUser",200,'.js-active-users')

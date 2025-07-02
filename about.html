@@ -21,20 +21,52 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="recipe.html">Recipe</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="">Sign up</a></li>
+      <li class="toggle-modal">Sign up</li>
     </nav>
     <div class="header-icon">
       <div class="fav-icon">
-        <a href="favourite.html"><img src="images/icons/heart (3).png" alt=""></a>
+        <img src="images/icons/heart (3).png" alt="">
       </div>
       <div class="user-icon">
-        <img src="images/icons/profile-user (4).png" alt="">
+        <img class="toggle-modal profile" src="images/icons/profile-user (4).png" alt="">
+        <div class="user-info">
+          <span class="user-name"></span>
+          <button class="log-out-btn">log out</button>
+        </div>
       </div>
       <div class="hamburger js-hamburger">
         <img src="images/icons/hamburger.png" alt="">
       </div>
     </div>
   </header>
+  <section class="modal">
+    <div class="modal-cont sign-up">
+      <img class="cancel-modal" src="images/icons/cancel.png" alt="">
+      <div class="modal-header">
+        <h1>Sign Up</h1>
+        <p> Sign up to save recipes,and access profile setting</p>
+      </div>
+      <form class="modal-form">
+        <input class="name" type="text" placeholder="Username" required>
+        <input class="email" type="email" placeholder="Email Address" required>
+        <input class="password" type="password" placeholder="Password" required>
+        <button type="submit" class="secondary-btn">Sign Up</button>
+      </form>
+      <p>Already have an account?<span class="login-btn modal-btn">Login</span></p>
+    </div>
+    <div class="modal-cont login">
+      <img class="cancel-modal" src="images/icons/cancel.png" alt="">
+      <div class="modal-header">
+        <h1>Welcome Back</h1>
+      </div>
+      <form class="login-form">
+        <input class="login-email" type="email" placeholder="Email Address" required>
+        <input class="login-password" type="password" placeholder="Password" required>
+        <button type="submit" class="secondary-btn">Login</button>
+      </form>
+      <p>Don't have an account?<span class="sign-btn modal-btn">Sign Up</span></p>
+    </div>
+  </section>
   <main>
     <section class="hero js-hero">
       <div class="hero-cont"> 
@@ -198,7 +230,7 @@
             <nav>
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About</a></li>
-              <li><a href="">Sign up</a></li>
+              <li class="toggle-modal">Sign up</li>
             </nav>
           </div>
           <div class="nav-links">
