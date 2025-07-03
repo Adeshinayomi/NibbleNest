@@ -5,9 +5,11 @@ import { pagination } from "./component/pagination.js";
 import { search } from "./component/searchRecipes.js";
 import { addRecipe } from "./component/addRecipe.js";
 import {toggleModal } from "./component/modal.js";
+import { loader } from "./component/loader.js";
 
 toggleModal()
 toggleSideBar()
+loader()
 pagination()
 search()
 loadRecipe()
@@ -364,7 +366,6 @@ document.querySelectorAll('.category-btns').forEach((btn)=>{
           btn.classList.remove('active')
         })
         e.target.classList.add('active')
-        await fetchAllRecipes()
         if(e.target.innerHTML.toLowerCase() === 'all'){
           renderAllRecipes()
         }else{

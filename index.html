@@ -6,6 +6,7 @@
   <!-- Styles -->
    <link rel="stylesheet" href="styles/general/general.css">
    <link rel="stylesheet" href="styles/pages/index.css">
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
    <!-- Fonts  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +14,12 @@
   <title>Home - NibbleNest</title>
 </head>
 <body>
+  <section class="loader">
+    <div class="loader-cont">
+      <div class="rotating-border"></div>
+      <img src="images/logo.webp" alt="">
+    </div>
+  </section>
   <header>
     <div class="logo">
       <img src="images/logo.webp" alt="">
@@ -41,11 +48,11 @@
   </header>
   <section class="hero js-hero">
     <div class="hero-cont">
-      <div class="hero-text">
+      <div class="hero-text animate-text">
         <h1>Find Your Next Favorite Recipe</h1>
         <p>From quick bites to comfort meals, NibbleNest helps you Discover and save recipes</p>
       </div>
-      <div class="form">
+      <div class="form animate-block" >
         <input class="js-search-string" type="text" placeholder="search for recipes.....">
         <button class="secondary-btn js-search-btn">Let's Get Cooking</button>
       </div>
@@ -120,7 +127,12 @@
         </div>
       </div>
     </section>
-    <section class="trending-recipes">
+    <section class="trending-recipes" 
+  data-aos="fade-up"
+  data-aos-delay="50"
+  data-aos-duration="2000"
+  data-aos-easing="ease-in-out"
+    >
       <div class="trend-header section-header">
         <div class="fancy">
           <img src="images/icons/vintage.png" alt="">
@@ -145,14 +157,23 @@
         </button>
       </div>
     </section>
-    <section class="testimonies">
+    <section class="testimonies"
+    data-aos="fade-up"
+    data-aos-offset="100"
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="true"
+    data-aos-anchor-placement="top-center"
+    >
       <div class="testimonies-header section-header">
         <div class="fancy">
           <img src="images/icons/vintage.png" alt="">
         </div>
         <h1>Testimonies</h1>
       </div>
-      <div class="testimonies-cont js-slider">
+      <div class="testimonies-cont js-slider" >
         <div class="testimony-card">
           <div class="stars">
             <img src="images/icons/star (2).png" alt="">
@@ -206,7 +227,12 @@
         <button class="prev-btn"><img src="images/icons/arrow-left (1).png" alt=""></button>
         <button class="next-btn"><img src="images/icons/arrow-right (1).png" alt=""></button>
     </div>
-    <section class="CTA">
+    <section class="CTA"
+  data-aos="fade-up"
+  data-aos-delay="50"
+  data-aos-duration="2000"
+  data-aos-easing="ease-in-out"
+    >
       <div class="CTA-cont">
         <h1>Join the Nest - Let's Get Cooking</h1>
         <p>
@@ -262,5 +288,9 @@
   </main>
   
   <script type="module" src="scripts/Nibble.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

@@ -2,7 +2,9 @@ import { pagination } from "./component/pagination.js";
 import { toggleSideBar } from "./component/header.js";
 import { countDown } from "./component/countDown.js";
 import {toggleModal } from "./component/modal.js";
+import { loader } from "./component/loader.js";
 
+loader()
 toggleModal()
 pagination()
 toggleSideBar()

@@ -3,6 +3,8 @@ import { toggleSideBar } from "./component/header.js";
 import { pagination } from "./component/pagination.js";
 import { loadRecipe } from "./component/TrendingRecipes.js";
 import {toggleModal } from "./component/modal.js";
+import { loader } from "./component/loader.js";
+loader()
 loadRecipe();
 toggleModal()
 toggleSideBar()

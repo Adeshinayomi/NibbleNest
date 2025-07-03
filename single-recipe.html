@@ -6,6 +6,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="styles/general/general.css">
   <link rel="stylesheet" href="styles/pages/single-recipe.css">
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +14,13 @@
   <title>Single-Recipe - NibbleNest</title>
 </head>
 <body>
-    <header>
+  <section class="loader">
+    <div class="loader-cont">
+      <div class="rotating-border"></div>
+      <img src="images/logo.webp" alt="">
+    </div>
+  </section>
+  <header>
     <div class="logo">
       <img src="images/logo.webp" alt="">
     </div>
@@ -67,10 +74,15 @@
       <p>Don't have an account?<span class="sign-btn modal-btn">Sign Up</span></p>
     </div>
   </section>
-  <main class="js-recipy js-hero">
+  <main class="js-recipy js-hero animate-text">
 
   </main>
-  <section class="trending-recipes related-recipes">
+  <section class="trending-recipes animate-block related-recipes"
+  data-aos="fade-up"
+  data-aos-delay="50"
+  data-aos-duration="2000"
+  data-aos-easing="ease-in-out"
+  >
       <div class="trend-header section-header">
         <div class="fancy">
           <img src="images/icons/vintage.png" alt="">
@@ -81,8 +93,8 @@
 
       </div>
       <div class="nav-btns recipe-nav-btn">
-        <button><img src="images/icons/arrow-left (1).png" alt=""></button>
-        <button><img src="images/icons/arrow-right (1).png" alt=""></button>
+       <button class="prev-btn"><img src="images/icons/arrow-left (1).png" alt=""></button>
+        <button class="next-btn"><img src="images/icons/arrow-right (1).png" alt=""></button>
       </div>
   </section>
   <footer>
@@ -128,5 +140,9 @@
       </div>
     </footer>
   <script type="module" src="scripts/renderRecipes.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init();
+  </script>
 </body>
 </html>

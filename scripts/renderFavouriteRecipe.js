@@ -1,6 +1,7 @@
 import { favouriteRecipe} from "../data/favouriteRcipe.js";
 import { getRecipes,fetchAllRecipes} from "../data/recipe.js";
-
+import { loader } from "./component/loader.js";
+loader()
 let currentPage=1;
 const recipesPerPage=6;
 

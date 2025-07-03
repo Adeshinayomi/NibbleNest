@@ -6,6 +6,7 @@
   <!-- Styles -->
    <link rel="stylesheet" href="styles/general/general.css">
    <link rel="stylesheet" href="styles/pages/recipe.css">
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +15,13 @@
   <title>Recipes - NibbleNest</title>
 </head>
 <body>
-    <header>
+  <section class="loader">
+    <div class="loader-cont">
+      <div class="rotating-border"></div>
+      <img src="images/logo.webp" alt="">
+    </div>
+  </section>
+  <header>
     <div class="logo">
       <img src="images/logo.webp" alt="">
     </div>
@@ -71,9 +78,9 @@
   <main>
     <section class="hero js-hero">
       <div class="hero-cont">
-        <h1>Explore More Recipe Options</h1>
-        <div class="form">
-          <input class="ja-search-string" type="text" placeholder="Search for Recipes...">
+        <h1 class="animate-text">Explore More Recipe Options</h1>
+        <div class="form animate-block">
+          <input class="js-search-string" type="text" placeholder="Search for Recipes...">
           <button class="secondary-btn js-search-btn">Let's Get Cooking</button>
         </div>
       </div>
@@ -81,7 +88,7 @@
     <section class="categories">
       <div class="category-btns-cont">
         <button class="category-btns active">All</button>
-        <button class="category-btns">Vegetable</button>
+        <button class="category-btns">Chicken</button>
         <button class="category-btns">BreakFast</button>
         <button class="category-btns">Vegan</button>
       </div>
@@ -90,7 +97,12 @@
         <button class="category-btns">Starter</button>
       </div>
     </section>
-    <section class="recipes js-slider">
+    <section class="recipes js-slider"
+      data-aos="fade-up"
+  data-aos-delay="50"
+  data-aos-duration="2000"
+  data-aos-easing="ease-in-out"
+    >
       <div class="recipes-main js-all-recipes-cont">
       </div>
     </section>
@@ -100,7 +112,12 @@
         <button class="next-btn js-recipe-next-btn"><img src="images/icons/arrow-right (1).png" alt=""></button>
       </div> 
     </div>
-    <section class="trending-recipes">
+    <section class="trending-recipes"
+      data-aos="fade-up"
+  data-aos-delay="50"
+  data-aos-duration="2000"
+  data-aos-easing="ease-in-out"
+    >
       <div class="trend-header section-header">
         <div class="fancy">
           <img src="images/icons/vintage.png" alt="">
@@ -110,8 +127,8 @@
       <div class="recipes-cont js-recipes-cont">
       </div>
       <div class="nav-btns recipe-nav-btn recipe-trend-btn">
-        <button><img src="images/icons/arrow-left (1).png" alt=""></button>
-        <button><img src="images/icons/arrow-right (1).png" alt=""></button>
+       <button class="prev-btn"><img src="images/icons/arrow-left (1).png" alt=""></button>
+        <button class="next-btn"><img src="images/icons/arrow-right (1).png" alt=""></button>
       </div>
     </section>
         <footer>
@@ -159,5 +176,9 @@
   </main>
 
   <script type="module" src="scripts/allrecipes.js "></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

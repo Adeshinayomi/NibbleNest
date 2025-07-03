@@ -6,6 +6,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="styles/general/general.css">
   <link rel="stylesheet" href="styles/pages/about.css">
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <!-- Fonts  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +14,12 @@
   <title>About us - NibbleNest</title>
 </head>
 <body>
+  <section class="loader">
+    <div class="loader-cont">
+      <div class="rotating-border"></div>
+      <img src="images/logo.webp" alt="">
+    </div>
+  </section>
   <header>
     <div class="logo">
       <img src="images/logo.webp" alt="">
@@ -70,7 +77,7 @@
   <main>
     <section class="hero js-hero">
       <div class="hero-cont"> 
-        <div class="hero-text">
+        <div class="hero-text animate-text">
           <h1>Get To Know NibbleNest</h1>
           <p>
             NibbleNest was built to make cooking joyful and simple. We blend global flavors with smart tools to help home cooks .
@@ -104,13 +111,18 @@
             </div>
           </div>
         </div>
-        <div class="hero-image">
+        <div class="hero-image animate-block">
           <img src="images/about-hero-image.jpg" alt="">
         </div>
       </div>
     </section>
     <section class="about-us">
-      <div class="about-text">
+      <div class="about-text"
+  data-aos="fade-up"
+  data-aos-delay="50"
+  data-aos-duration="2000"
+  data-aos-easing="ease-in-out"
+      >
         <h1>Who We Are</h1>
         <p>
           Welcome to NibbleNest — your cozy corner of the web where cooking meets creativity.
@@ -119,7 +131,12 @@
           Grab a fork. Dive in. Let’s cook something amazing together.
         </p>
       </div>
-      <div class="about-image">
+      <div class="about-image"
+  data-aos="fade-left"
+  data-aos-delay="50"
+  data-aos-duration="2000"
+  data-aos-easing="ease-in-out"
+      >
         <img src="images/about-image.jpg" alt="">
       </div>
     </section>
@@ -140,19 +157,45 @@
       </div>
     </section>
     <section class="chefs">
-      <div class="chef-header section-header">
+      <div class="chef-header section-header"
+         data-aos="fade-up"
+  data-aos-delay="50"
+  data-aos-duration="2000"
+  data-aos-easing="ease-in-out"
+      >
         <div class="fancy">
           <img src="images/icons/vintage.png" alt="">
         </div>
         <h1>Meet The Cooks Behind The Magic</h1>
       </div>
       <div class="chef-cont">
-        <div class="chef-card"><img src="images/chef(1).jpg" alt=""></div>
-        <div class="chef-card"><img src="images/chef(2).jpg" alt=""></div>
-        <div class="chef-card"><img src="images/chef(3).jpg" alt=""></div>
+        <div class="chef-card"
+  data-aos="fade-up"
+  data-aos-delay="50"
+  data-aos-duration="2000"
+  data-aos-easing="ease-in-out"
+        ><img src="images/chef(1).jpg" alt=""></div>
+        <div class="chef-card"
+  data-aos="fade-up"
+  data-aos-delay="50"
+  data-aos-duration="2000"
+  data-aos-easing="ease-in-out"
+        ><img src="images/chef(2).jpg" alt=""></div>
+        <div class="chef-card"
+  
+  data-aos="fade-up"
+  data-aos-delay="50"
+  data-aos-duration="2000"
+  data-aos-easing="ease-in-out"
+        ><img src="images/chef(3).jpg" alt=""></div>
       </div>
     </section>
-    <section class="testimonies">
+    <section class="testimonies"
+  data-aos="fade-up"
+  data-aos-delay="50"
+  data-aos-duration="2000"
+  data-aos-easing="ease-in-out"
+    >
       <div class="testimonies-header section-header">
         <div class="fancy">
           <img src="images/icons/vintage.png" alt="">
@@ -258,5 +301,9 @@
   </main>
 
   <script type="module" src="scripts/about.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init();
+  </script>
 </body>
 </html>
