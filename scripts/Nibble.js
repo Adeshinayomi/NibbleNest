@@ -4,6 +4,7 @@ import { loadRecipe } from "./component/TrendingRecipes.js";
 import {search} from "./component/searchRecipes.js";
 import {toggleModal } from "./component/modal.js";
 import { loader } from "./component/loader.js";
+import { isUserSignedIn } from "../data/user.js";
 loadRecipe();
 toggleSideBar()
 pagination();
@@ -17,3 +18,6 @@ const categoryBtns=document.querySelectorAll('.js-category-btn');
  }) 
 search()
 toggleModal()
+if(isUserSignedIn){
+  document.querySelector('.CTA-cont').style.display='none';
+ } 

@@ -1,10 +1,9 @@
 import { isUserSignedIn,user,changeSignInValue } from "../../data/user.js"
 
 export function toggleModal(){
-
   if(isUserSignedIn){
-
-    document.querySelector('.sign-up').style.display='none'  
+   document.querySelector('.user-name').innerHTML= JSON.parse(localStorage.getItem('user-name'))
+   document.querySelector('.sign-up').style.display='none'  
   }
   
   document.querySelectorAll('.toggle-modal').forEach((btn)=>{
@@ -49,8 +48,7 @@ export function toggleModal(){
     changeSignInValue(true)
     document.querySelector('.user-name').innerHTML=name.value 
     document.querySelector('.modal').style.display="none"
-    window.location='index.html'
-
+    window.location=`${window.location.href}`
   })
 
   document.querySelector('.profile').addEventListener('click',()=>{
@@ -96,9 +94,9 @@ export function toggleModal(){
         console.log(email.value)
         if(email.value === info.email && password.value === info.password){
           changeSignInValue(true)
-          document.querySelector('.user-name').innerHTML=info.name
           document.querySelector('.modal').style.display="none"
-          window.location='index.html'
+          localStorage.setItem('user-name',JSON.stringify(info.name))
+          window.location=`${window.location.href}`
         }
       })
   })
