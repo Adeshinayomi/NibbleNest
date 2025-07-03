@@ -5,6 +5,7 @@
   text-decoration: none;
   box-sizing: border-box;
   font-family:'Baloo 2', sans-serif;
+  scroll-behavior: smooth;
 }
 
 :root{
@@ -34,13 +35,12 @@ body::-webkit-scrollbar {
   width: 100%;
   position: fixed;
   top: 0;
-  height: 100vh;
+  height: 100%;
   background-color: var(--primary-color);
   display: grid;
   justify-content: center;
   align-items:center ;
   z-index: 1000000;
-  /* display:none */
 } 
 .loader-cont{
   position: relative;
@@ -604,6 +604,9 @@ footer .credit{
   }
   .js-hero.hide{
     opacity: 0;
+  }
+  .modal{
+      padding:100px 0;
   }
   .modal .modal-cont{
     width: 95%;
